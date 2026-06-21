@@ -1,11 +1,17 @@
 import assert from 'node:assert';
+import { File } from 'node:buffer';
 import { scheduler } from 'node:timers/promises';
 import { Readable } from 'node:stream';
-import urllib from 'urllib';
 import formstream from 'formstream';
 import { mm } from 'mm';
 import { app } from './form_app.js';
 import { getFixtures } from './helper.js';
+
+if (typeof globalThis.File === 'undefined') {
+  (globalThis as any).File = File;
+}
+
+const { default: urllib } = await import('urllib');
 
 describe('test/multipart.test.ts', () => {
   let host: string;
