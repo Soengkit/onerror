@@ -68,7 +68,7 @@ describe('test/accepts.test.ts', () => {
       .set('Accept', '*/*')
       .expect('Content-Type', 'text/html; charset=utf-8')
       .expect('Location', 'http://foo.com/500.html')
-      .expect('Redirecting to <a href="http://foo.com/500.html">http://foo.com/500.html</a>.')
+      .expect('Redirecting to http://foo.com/500.html.')
       .expect(302);
   });
 });

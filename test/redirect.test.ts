@@ -24,7 +24,7 @@ describe('test/redirect.test.ts', () => {
       .get('/')
       .set('Accept', 'text/html')
       .expect('Content-Type', 'text/html; charset=utf-8')
-      .expect('Redirecting to <a href="http://example/500.html">http://example/500.html</a>.')
+      .expect('Redirecting to http://example/500.html.')
       .expect('Location', 'http://example/500.html');
   });
 
