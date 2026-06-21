@@ -4,7 +4,7 @@
   "description": "koa error handler, hack ctx.onerror",
   "repository": {
     "type": "git",
-    "url": "git://github.com/koajs/onerror.git"
+    "url": "git+https://github.com/koajs/onerror.git"
   },
   "keywords": [
     "koa",
